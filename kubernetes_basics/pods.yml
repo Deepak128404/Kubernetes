@@ -1,9 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp
+  name: myapp3
+  labels: 
+    region: 'US'
+    Team: 'Prod'
 spec:
   containers:
   - name: myapp
-    image: deepak25404/django-hello-world:latest
+    image: deepak25404/ip-flask:v3
     
