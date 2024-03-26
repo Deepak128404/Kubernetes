@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+spec:
+  selector:
+    matchExpressions:
+      - key: region
+        operator: In
+        values:
+        - India
+  replicas: 3
+  template:
+    metadata:
+      name: myapp3
+      labels: 
+        region: 'India'
+    spec:
+      containers:
+      - name: myapp
+        image: deepak25404/ip-flask:v3
