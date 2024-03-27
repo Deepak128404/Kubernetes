@@ -15,6 +15,7 @@ spec:
       name: myapp3
       labels: 
         region: 'India'
+        environment: 'Prod'
     spec:
       containers:
       - name: myapp
