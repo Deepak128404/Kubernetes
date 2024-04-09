@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy-2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      version: v2
+  strategy: 
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        version: v2
+    spec:
+      containers:
+      - image: deepak25404/ip-flask:v2
+        name: ip-flask
+
